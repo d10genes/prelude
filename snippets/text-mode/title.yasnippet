@@ -1,0 +1,7 @@
+#name : Title Block
+#key : tit
+# --
+`(insert comment-start)` ${1:$(make-string (+ 6 (string-width yas-text)) ?\=)}
+`(insert comment-start)` ===${1: $(upcase yas-text)}===
+`(insert comment-start)` ${1:$(make-string (+ 6 (string-width yas-text)) ?\=)}
+$0
