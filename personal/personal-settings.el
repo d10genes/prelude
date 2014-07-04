@@ -21,6 +21,8 @@
 (global-set-key (kbd "M-:") 'comment-or-uncomment-region-or-line)
 (global-set-key (kbd "ESC <up>") 'evil-window-up)
 (global-set-key (kbd "ESC <down>") 'evil-window-down)
+(global-set-key (kbd "ESC <right>") 'evil-window-right)
+(global-set-key (kbd "ESC <left>") 'evil-window-left)
 ; (global-set-key (kbd "M-h") 'help-command)
 (global-set-key (kbd "M-h") 'kill-region)
 (global-set-key (kbd "s-j") 'prelude-top-join-line)
@@ -70,4 +72,7 @@
 ; (setq inferior-julia-program-name "/usr/local/bin/julia")
 (setq inferior-julia-program-name "/usr/local/bin/julia-basic")
 
-
+; SHM
+(add-to-list 'load-path "/Users/williambeard/repos/edu/hask/yorgey/structured-haskell-mode/elisp")
+(require 'shm)
+(add-hook 'haskell-mode-hook 'structured-haskell-mode)
